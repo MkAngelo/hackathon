@@ -15,7 +15,7 @@ class Report(models.Model):
     datetime = models.DateField()
     place = models.TextField()
     name = models.CharField(max_length=150, null=True, blank=True)
-    sexo = models.CharField(max_length=1, choices=SEX_CHOICES, null=True, blank=True, default='A')
+    sexo = models.CharField(max_length=1, choices=SEX_CHOICES, null=True, blank=True)
     edad = models.PositiveIntegerField(null=True, blank=True)
     ocupacion = models.CharField(max_length=150, null=True, blank=True)
     escolaridad_d = models.CharField(max_length=150, null=True, blank=True)

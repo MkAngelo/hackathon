@@ -5,13 +5,19 @@
 {% endblock head_content %}
 
 {% block container %}
+
+
 <!-- formulario -->
 <section id="content">
     <div class="container clearfix">
-
+        
         <div class="alert alert-warning" role="alert">
             Nota: Toda la Información aquí proporcionada será tratada con confidencialidad.
         </div>
+        
+        {% if error %}
+        <p class="alert alert-danger">{{ error }}</p>
+        {% endif %}
 
         <div class="row bottommargin-sm c-azul">
 
@@ -29,7 +35,7 @@
                     <br>
                     <div class="col_one_third c-azul col_last ">
                         <label for="sexo">Sexo de la víctima</label>
-                        <select name="selectsexo" id="sexo" class="custom-select">
+                        <select name="sexo" id="sexo" class="custom-select">
                         <option value="A">Sin esfecificar</option>
                         <option value="H">Hombre</option>
                         <option value="M">Mujer</option> 
@@ -90,7 +96,7 @@
                     <!-- video -->
                     <div class="form-group">
                         <label for="video">Video</label>
-                        <input type="file" class="form-control-file" id="video" name="foto">
+                        <input type="file" class="form-control-file" id="video" name="video">
                     </div>
                     <!-- terminar -->
                     <button type="submit" class="btn btn-success btn-lg btn-block">Denunciar</button>
