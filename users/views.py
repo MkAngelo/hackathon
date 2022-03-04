@@ -8,4 +8,11 @@ def home(request):
 
 def denuncia(request):
     """Denuncia page"""
-    pass
+    if request.method == 'POST':
+        print('*'*10)
+        datetime = request.POST['fecha']
+        nombre_v = request.POST['nombre_victima']
+        nombre_den = request.POST['nombre_denunciado']
+        print(nombre_v,nombre_den, datetime)
+        print('*'*10)
+    return render(request, 'users/denuncia.html')
