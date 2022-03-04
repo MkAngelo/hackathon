@@ -10,11 +10,11 @@
 <!-- formulario -->
 <section id="content">
     <div class="container clearfix">
-        
+
         <div class="alert alert-warning" role="alert">
             Nota: Toda la Información aquí proporcionada será tratada con confidencialidad.
         </div>
-        
+
         {% if error %}
         <p class="alert alert-danger">{{ error }}</p>
         {% endif %}
@@ -30,7 +30,7 @@
                     <h3>Datos de la víctima</h3>
                     <!-- nombre de la victima -->
                     <label for="nombre_victima">Nombre de la víctima</label>
-                    <input class="form-control" type="text" placeholder="Ej. Fransisco Javier Torres Campos" name="nombre_victima">
+                    <input class="form-control" type="text" placeholder="Ej. Francisco Javier Torres Campos" name="nombre_victima">
                     <!-- sexo -->
                     <br>
                     <div class="col_one_third c-azul col_last ">
@@ -38,8 +38,8 @@
                         <select name="sexo" id="sexo" class="custom-select">
                         <option value="A">Sin especificar</option>
                         <option value="H">Hombre</option>
-                        <option value="M">Mujer</option> 
-                        <option value="O">Otro</option> 
+                        <option value="M">Mujer</option>
+                        <option value="O">Otro</option>
                         </select>
                     </div>
                     <!-- edad -->
@@ -100,13 +100,13 @@
                     </div>
                     <!-- terminar -->
                     <button type="submit" class="btn btn-success btn-lg btn-block">Denunciar</button>
-                   
-                </form>     
+
+                </form>
 
             </div>
 
         </div>
     </div>
-    
+
 </section>
 {% endblock %}
