@@ -6,6 +6,7 @@ from django.db import models
 class Report(models.Model):
     """Report model."""
     SEX_CHOICES = [
+        ('A', 'Sin Especificar'),
         ('H', 'Hombre'),
         ('M', 'Mujer'),
         ('O', 'Otro'),
@@ -14,7 +15,7 @@ class Report(models.Model):
     datetime = models.DateField()
     place = models.TextField()
     name = models.CharField(max_length=150, null=True, blank=True)
-    sexo = models.CharField(max_length=1, choices=SEX_CHOICES, null=True, blank=True)
+    sexo = models.CharField(max_length=1, choices=SEX_CHOICES, null=True, blank=True, default='A')
     edad = models.PositiveIntegerField(null=True, blank=True)
     ocupacion = models.CharField(max_length=150, null=True, blank=True)
     escolaridad_d = models.CharField(max_length=150, null=True, blank=True)

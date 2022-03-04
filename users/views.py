@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from users.forms import ReportForm
 
 # Create your views here.
 def home(request):
@@ -7,4 +8,4 @@ def home(request):
 
 def denuncia(request):
     """Denuncia page"""
-    return render(request, 'users/denuncia.html')
+    pass
