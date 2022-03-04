@@ -17,7 +17,8 @@
 
             <div class="container clearfix">
 
-                <form class="nobottommargin" method="post" id="bolsa" enctype="multipart/form-data" action="formpdf.php" >
+                <form class="nobottommargin" method="post" id="denuncia" enctype="multipart/form-data" action="#" >
+                    {% csrf_token %}
                     <fieldset>
                         <!-- datos de la victima -->
                         <h3>Datos de la víctima</h3>
