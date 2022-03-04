@@ -5,5 +5,100 @@
 {% endblock head_content %}
 
 {% block container %}
+<!-- formulario -->
+<section id="content">
+    <div class="container clearfix">
 
+        <div class="alert alert-warning" role="alert">
+            Nota: Toda la Información aquí proporcionada será tratada con confidencialidad.
+        </div>
+
+        <div class="row bottommargin-sm c-azul">
+
+            <div class="container clearfix">
+
+                <form class="nobottommargin" method="post" id="bolsa" enctype="multipart/form-data" action="formpdf.php" >
+                    <fieldset>
+                        <!-- datos de la victima -->
+                        <h3>Datos de la víctima</h3>
+                        <!-- nombre de la victima -->
+                        <label for="nombre_victima">Nombre de la víctima</label>
+                        <input class="form-control" type="text" placeholder="Ej. Fransisco Javier Torres Campos" name="nombre_victima">
+                        <!-- sexo -->
+                        <br>
+                        <div class="col_one_third c-azul col_last ">
+                            <label for="sexo">Sexo de la víctima</label>
+                            <select name="selectsexo" id="sexo" class="custom-select">
+                            <option value="H">Hombre</option>
+                            <option value="M">Mujer</option> 
+                            <option value="O">Otro</option> 
+                           </select>
+                        </div>
+                        <!-- edad -->
+                        <br>
+                        <label for="edad">Edad de la víctima</label>
+                        <input class="form-control" type="text" placeholder="Ej. 21" name="edad">
+                        <br>
+                        <!-- ocupacion -->
+                        <label for="ocupacion">Ocupación de la víctima</label>
+                        <input class="form-control" type="text" placeholder="Ej. Estudiante" name="ocupacion">
+                        <br>
+                        <!-- email -->
+                        <label for="email">Email de la víctima</label>
+                        <input class="form-control" type="text" placeholder="eli@ejemplo.com" name="email">
+                        <br>
+                        <h3>Datos del denunciado</h3>
+                        <br>
+                        <!-- nombre del denunciado -->
+                        <label for="nombre_denunciado">Nombre del denunciado</label>
+                        <input class="form-control" type="text" placeholder="Ej. Jose Manuel Villa Gomez" name="nombre_denunciado">
+                        <br>
+                        <!-- escolaridad del denunciado -->
+                        <label for="escolaridad_denunciado">Escolaridad del denunciado</label>
+                        <input class="form-control" type="text" placeholder="Ej. Licenciatura" name="escolaridad_denunciado">
+                        <br>
+                        <!-- ocupacion del denunciado -->
+                        <label for="ocupacion_denunciado">Ocupación del denunciado</label>
+                        <input class="form-control" type="text" placeholder="Ej. Policia" name="ocupacion_denunciado">
+                        <br>
+                        <!-- información del delito -->
+                        <h3>Información del delito</h3>
+                        <!-- calendario -->
+                        <div class="col_one_third col_last c-azul">
+                            <label for="fecha">Fecha del delito:</label>
+                            <input type="date" id="fecha"  name="fecha"  class="sm-form-control">
+                        </div>
+                        <!-- lugar -->
+                        <div class="form-group">
+                            <label for="lugar">Lugar dónde paso el delito</label>
+                            <textarea class="form-control" id="lugar" name="lugar" rows="3"></textarea>
+                        </div>
+                        <!-- descripcion -->
+                        <div class="form-group">
+                            <label for="descripcion">Descripción del delito</label>
+                            <textarea class="form-control" id="descripcion" name="descripcion" rows="3"></textarea>
+                        </div>
+                        <!-- pruebas -->
+                        <h5>Pruebas</h5>
+                        <!-- foto -->
+                        <div class="form-group">
+                            <label for="foto">Foto</label>
+                            <input type="file" class="form-control-file" id="foto" name="foto">
+                        </div>
+                        <!-- video -->
+                        <div class="form-group">
+                            <label for="video">Video</label>
+                            <input type="file" class="form-control-file" id="video" name="foto">
+                        </div>
+                        <!-- terminar -->
+                        <button type="button" class="btn btn-success btn-lg btn-block">Denunciar</button>
+                   </fieldset>
+
+                </form>     
+
+            </div>
+
+        </div>
+    </div>
+</section>
 {% endblock %}
