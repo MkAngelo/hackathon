@@ -52,3 +52,7 @@ def denuncia(request):
 def terminos(request):
     """Terminos y condiciones"""
     return render(request, "terminos.html")
+
+def handle_404_error(request, exception):
+    """Error 404"""
+    return render(request, "not_found.html")
