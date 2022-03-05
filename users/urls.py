@@ -8,4 +8,5 @@ from users import views
 urlpatterns =[
     path('', views.home, name='home'),
     path('denuncia/', views.denuncia, name='denuncia'),
+    path('terminios/', views.terminos, name='terminos')
 ]

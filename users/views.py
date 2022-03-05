@@ -44,3 +44,7 @@ def denuncia(request):
         return redirect('users:denuncia')
 
     return render(request, 'users/denuncia.html')
+
+def terminos(request):
+    """Terminos y condiciones"""
+    return render(request, "terminos.html")
