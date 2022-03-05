@@ -11,12 +11,17 @@
 <section id="content">
     <div class="container clearfix">
 
-        <div class="alert alert-warning" role="alert">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
             Nota: Toda la Información aquí proporcionada será tratada con confidencialidad.
         </div>
 
         {% if error %}
-        <p class="alert alert-danger">{{ error }}</p>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>ERROR! </strong> {{ error }}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
         {% endif %}
 
         <div class="row bottommargin-sm c-azul">
@@ -66,24 +71,24 @@
                     <input class="form-control" type="text" placeholder="Ej. Licenciatura" name="escolaridad_denunciado">
                     <br>
                     <!-- ocupacion del denunciado -->
-                    <label for="ocupacion_denunciado">Ocupación del denunciado*</label>
+                    <label for="ocupacion_denunciado">Ocupación del denunciado<strong>*</strong></label>
                     <input class="form-control" type="text" placeholder="Ej. Policia" name="ocupacion_denunciado" required="true">
                     <br>
                     <!-- información del delito -->
                     <h3>Información del delito</h3>
                     <!-- calendario -->
                     <div class="col_one_third col_last c-azul">
-                        <label for="fecha">Fecha del delito*</label>
+                        <label for="fecha">Fecha del delito<strong>*</strong></label>
                         <input type="date" id="fecha"  name="fecha"  class="sm-form-control" required="true">
                     </div>
                     <!-- lugar -->
                     <div class="form-group">
-                        <label for="lugar">Lugar dónde paso el delito*</label>
+                        <label for="lugar">Lugar dónde paso el delito<strong>*</strong></label>
                         <textarea class="form-control" id="lugar" name="lugar" rows="3" required="true"></textarea>
                     </div>
                     <!-- descripcion -->
                     <div class="form-group">
-                        <label for="descripcion">Descripción del delito*</label>
+                        <label for="descripcion">Descripción del delito<strong>*</strong></label>
                         <textarea class="form-control" id="descripcion" name="descripcion" rows="3" required="true"></textarea>
                     </div>
                     <!-- pruebas -->
