@@ -10,11 +10,19 @@ def home(request):
 def denuncia(request):
     """Denuncia page"""
     if request.method == 'POST':
+
         fecha = request.POST['fecha']
         descri = request.POST['descripcion']
         nombre_den = request.POST['nombre_denunciado']
         ocupacion_den = request.POST['ocupacion_denunciado']
         lugar = request.POST['lugar']
+
+        if(request.POST['edad'] == ""):
+            edadMas = 0;
+        elif(int(request.POST['edad']) < 100 and int(request.POST['edad']) > 0):
+            edadMas = request.POST['edad']
+        else:
+            return render(request, 'users/denuncia.html', {'error': 'Debes de poner una edad válida'})
         
         if fecha == "" or descri == "" or ocupacion_den == "" or lugar == "":
             return render(request, 'users/denuncia.html', {'error': 'Necesitas llenar los campos que tienen un (*)'})
@@ -31,12 +39,8 @@ def denuncia(request):
             imagen = request.POST['foto'],
             video = request.POST['video'],
             email = request.POST['email'],
+            edad = edadMas
         )
-
-        if(request.POST['edad'] == ""):
-            report.edad = 0;
-        else:
-            report.edad = request.POST['edad']
 
         report.save()
 
@@ -48,3 +52,7 @@ def denuncia(request):
 def terminos(request):
     """Terminos y condiciones"""
     return render(request, "terminos.html")
+
+def handle_404_error(request, exception):
+    """Error 404"""
+    return render(request, "not_found.html")
