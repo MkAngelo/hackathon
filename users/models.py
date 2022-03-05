@@ -22,8 +22,8 @@ class Report(models.Model):
     name_d = models.CharField(max_length=150, null=True, blank=True)
     ocupacion_d = models.CharField(max_length=150)
     descripcion = models.TextField(max_length=500)
-    imagen = models.ImageField(upload_to="users/denuncia/imagenes", blank=True, null=True)
-    video = models.FileField(upload_to=u"users/denuncia/videos", blank=True, null=True)
+    imagen = models.ImageField(upload_to="users/denuncia/imagenes", null=True)
+    video = models.FileField(upload_to=u"users/denuncia/videos", null=True)
     email = models.EmailField(blank=True, null=True)
 
     def __str__(self):

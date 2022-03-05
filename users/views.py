@@ -36,8 +36,8 @@ def denuncia(request):
             ocupacion = request.POST['ocupacion'],
             escolaridad_d = request.POST['escolaridad_denunciado'],
             descripcion = descri,
-            imagen = request.POST['foto'],
-            video = request.POST['video'],
+            imagen = request.FILES.get('foto'),
+            video = request.FILES.get('video'),
             email = request.POST['email'],
             edad = edadMas
         )

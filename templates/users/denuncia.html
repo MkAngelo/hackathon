@@ -35,7 +35,7 @@
 
             <div class="container clearfix">
 
-                <form method="POST" action='{% url "users:denuncia" %}'>
+                <form method="POST" action='{% url "users:denuncia" %}' enctype="multipart/form-data">
                     {% csrf_token %}
 
                     <!-- datos de la victima -->
