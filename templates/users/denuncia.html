@@ -9,10 +9,17 @@
 
 <!-- formulario -->
 <section id="content">
+    <br><br><br>
     <div class="container clearfix">
 
+        {% for msg in messages %}
+          <div class="alert alert-success" role="alert">
+            <strong>¡Denuncia realizada!</strong> {{msg}}
+          </div>
+        {% endfor %}
+
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            Nota: Toda la Información aquí proporcionada será tratada con confidencialidad.
+            <strong>NOTA:</strong> Toda la Información aquí proporcionada será tratada con confidencialidad.
         </div>
 
         {% if error %}
@@ -105,7 +112,8 @@
                     </div>
                     <!-- terminar -->
                     <button type="submit" class="btn btn-success btn-lg btn-block">Denunciar</button>
-
+                    
+                    <br><br><br>
                 </form>
 
             </div>

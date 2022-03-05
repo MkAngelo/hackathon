@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from users.forms import ReportForm
+from django.contrib import messages
 from users.models import Report
 
 # Create your views here.
@@ -40,6 +40,7 @@ def denuncia(request):
 
         report.save()
 
-        return redirect('users:home')
+        messages.success(request, "Recuerda que los trámites de gobierno puden ser tardados, así que no te desesperes, todo saldrá bien.")
+        return redirect('users:denuncia')
 
     return render(request, 'users/denuncia.html')
