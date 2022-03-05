@@ -1,11 +1,11 @@
 {% extends  "base.html" %}
 
 {% block head_content %}
-    <title>Inicio</title>
+    <title>Rebelión digital</title>
     <style>
         .imagen{
           width: 10rem;
-          height: 20rem;
+          height: 35rem;
         }
     </style>
 {% endblock head_content %}
@@ -26,10 +26,10 @@
           <img class="d-block w-100 imagen" src="{% static 'img/Dato1.jpeg' %}" alt="First slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100 imagen" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHif4ukSu0ETGGbF2-ZoOvRumpIEc54VwJTg&usqp=CAU" alt="Second slide">
+          <img class="d-block w-100 imagen" src="{% static 'img/Datp2.jpeg' %}" alt="Second slide">
         </div>
         <div class="carousel-item imagen">
-          <img class="d-block w-100" src="https://i.ytimg.com/vi/y-2R6A-HWTk/maxresdefault.jpg" alt="Third slide">
+          <img class="d-block w-100" src="{% static 'img/Dato3.jpeg' %}" alt="Third slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -42,54 +42,31 @@
       </a>
     </div>
 
-    <div class="container">
-  <div class="row">
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-    <div class="col-sm">
-      One of three columns
-    </div>
-  </div>
-  </div>
-
   </section>
 
 <section>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col">
+        <img src="https://i.pinimg.com/736x/dd/b4/01/ddb401a303c087f3671a5ae863835003.jpg" alt="..." class="rounded-circle">
+
+      </div>
+
+      <div class="col">
+        <h4>Hola</h4>
+      </div>
+
+
     </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
+
+
   </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-  <div class="card">
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-  </div>
-</div>
+
+
+
 </section>
 
 
