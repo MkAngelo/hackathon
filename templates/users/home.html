@@ -7,7 +7,15 @@
           width: 10rem;
           height: 35rem;
         }
+
+        .franja{
+          color: #F99627;
+        }
+
     </style>
+
+
+
 {% endblock head_content %}
 
 {% block container %}
@@ -46,20 +54,12 @@
 
 <section>
 
-
 <section>
   <div class = "container-fluid py-5 bg-info">
 
 		<div class ="text-center">
-
 			<h2 class ="" >Pasos para realizar una denuncia</h2>
-
-
-
-
-
 		</div>
-
 
 	</div>
 
@@ -114,22 +114,48 @@
 
   </div>
 
-  <div class="row justify-content-center py-5">
-    <div class="col-sm-12 col-md-4 col-lg-4">
-      <h4 class="text-center">Información adicional</h4>
-      <p class="text-justify">-El ministerio público NO puede rechazar tu denuncia. Si esto sucede, puedes reportarlo.<hr>
-        -En caso de que acudas a la oficina incorrecta (como a la FGR para denunciar el robo de tu celular), el personal que te atienda DEBE orientarte sobre dónde denunciar.<br>
-        -En caso de ser víctima de alguna irregularidad o acto de corrupción, denuncia en la Visitaduría u Órgano Interno de Control.</p>
-    </div>
 
-  </div>
 
 </div>
 
 
 
+  <div class="container-fluid bg-warning py-5">
+
+  </div>
+
+
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-sm-12 col-md-4 col-lg-4 ">
+        <h4 class="text-center">Información adicional</h4>
+        <p class="text-justify">-El ministerio público NO puede rechazar tu denuncia. Si esto sucede, puedes reportarlo.<hr>
+          -En caso de que acudas a la oficina incorrecta (como a la FGR para denunciar el robo de tu celular), el personal que te atienda DEBE orientarte sobre dónde denunciar.<br>
+          -En caso de ser víctima de alguna irregularidad o acto de corrupción, denuncia en la Visitaduría u Órgano Interno de Control.</p>
+      </div>
+
+      <div class="col-sm-0 col-md-4 col-lg-4">
+
+      </div>
+
+      <div class="col-sm-12 col-md-4 col-lg-4 text-center">
+
+        <img src="{% static 'img/logo.png' %}" class="img-fluid" alt="Responsive image">
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
+
+
+<footer class="footer mt-auto py-3">
+  <div class="container">
+    <span class="text-muted">Team Zugus® Todos los derechos reservados 2022</span>
+  </div>
+</footer>
 
 
 {% endblock %}
