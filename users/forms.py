@@ -8,7 +8,7 @@ from users.models import Report
 
 class ReportForm(forms.ModelForm):
     model = Report
-    fields = {
+    fields = (
         'datetime',
         'place',
         'name',
@@ -22,4 +22,4 @@ class ReportForm(forms.ModelForm):
         'imagen',
         'video',
         'email'
-    }
+    )
